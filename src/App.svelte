@@ -44,28 +44,45 @@
 	{:else if stage == 2}
 	<p style:font-size="x-large">Fetching XSTS Token...</p>
 	{:else if stage == 100}
-	<p style:justify-content="center" style:display="flex" style:font-weight="900" style:font-size="4em" style:margin="0.5em">You almost got <span style:color="red">&nbsp;hacked</span>!</p><br/>
-	<span style:justify-content="center" style:display="flex" style:font-weight="500" style:font-size="2em" style:margin="0.5em">
-		Every part have been done in your browser<br/>
+	<p style:justify-content="center" style:display="flex" style:font-weight="900" style:font-size="4em" style:margin="0.5em" style:padding="0">You almost got <span style:color="red">&nbsp;hacked</span>!</p>
+	<span style:justify-content="center" style:display="flex" style:font-weight="500" style:font-size="2em" style:margin="0.0em">
+		If this was a malicious website, your Minecraft&nbsp;<span class="tooltip"style:color="yellow" style:text-decoration="underline dotted" style:cursor="help">session token<span class="tooltip-text">Session token is a piece of text that proves your identity.<br/>With this in hand, the attacker can behave on behalf of you<br/><bold>Or simply, play minecraft servers on your account</bold></span></span>&nbsp;would've been<span style:color="red">&nbsp;stolen</span>
 	</span>
+	<a target="_blank" href="https://account.live.com/consent/Edit?client_id=0000000044AAAE90" style:justify-content="center" style:display="flex" style:margin="0.5em" style:color="lightblue">Click here to revoke permissions granted</a>
 	<span style:justify-content="center" style:display="flex" style:font-size="1em">
-		(Nothing is sent to developer's server)
+		Nothing is sent to the developer's server in this demo - Every token/code exchange was done on the web browser
 	</span>
-	<span style:justify-content="center" style:display="flex" style:font-size="1em">
-		However, if it was a real phishing website the attacker would've got your session token giving him access to your Minecraft account.
-	</span>
+	<p style:justify-content="center" style:display="flex" style:font-weight="600" style:font-size="4em" style:margin="0.5em">Wait, but how is this possible?</p>
+	<span style:justify-content="center" style:display="flex" style:font-size="2em">You might want to read&nbsp;<a target="_blank" href="https://github.com/DJtheRedstoner/PersonalOpinion/blob/master/01-msa-migration-bad.md" style:color="lightblue">this</a></span>
+	
+	<p style:justify-content="center" style:display="flex" style:font-weight="600" style:font-size="3em" style:margin="0.5em">Here are your tokens below</p>
+	
 
 	<ClickToReveal --font-size="2em" name="XboxLive Token" value={XBLToken}/>
 	<ClickToReveal --font-size="2em" name="XSTS Token" value={XSTSToken}/>
 	<ClickToReveal --font-size="2em" name="Minecraft Session Token" value={"Due to limitation in browser (cors), this token can not be fetched here. However it still can be fetched with above information at server."}/>
 	
-	<p style:justify-content="center" style:display="flex" style:font-weight="600" style:font-size="4em" style:margin="0.5em">Wait, but what happened?</p>
-	<span style:justify-content="center" style:display="flex" style:font-size="2em">You might want to read&nbsp;<a href="https://github.com/DJtheRedstoner/PersonalOpinion/blob/master/01-msa-migration-bad.md" style:color="lightblue">this</a></span>
 	{/if}
 </div>
 </div>
 
 <style>
+	bold {
+		font-weight: 800;
+	}
+.tooltip:hover .tooltip-text {
+  display: block;
+}
+	.tooltip-text {
+		display: none;
+		position: absolute;
+		border: 1px solid;
+		border-radius: 0.5em;
+		padding: 0.5em;
+		font-size: 0.7em;
+		color: white;
+		background: black;
+	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
