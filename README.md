@@ -1,7 +1,6 @@
-# MCOauth is bad
-This project's goal is to show how easy it is to obtain an one's access token without him or her noticing. (Extremely easy)
+# Mojang, Please Fix OAuth scopes.
 
-Microsoft should add better description of `XboxLive.signin` (please) or add new scopes for minecraft (unlikely) 
+This project's goal is to show how terrible OAuth scopes required for Minecraft auth are.
 
 Live at https://mcoauth.dungeons.guide/
 
