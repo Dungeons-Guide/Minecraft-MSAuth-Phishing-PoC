@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "deploy": "docker build . -t registry.dungeons.guide/msoauth:1.0 && docker push registry.dungeons.guide/msoauth:1.0"
   },
   "dependencies": {
     "@azure/msal-browser": "^2.23.0"
